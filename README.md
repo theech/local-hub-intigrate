@@ -5,9 +5,11 @@
 **_All the requirements software are available in the following step_**
 #### Install mosquitto (MQTT Broker)
 `sudo apt install mosquitto mosquitto-clients`
+
 This command will install both mosquitto and mosquitto-clients
 **enable mosquitto run when system is booted**
 `sudo systemctl enable mosquitto`
+
 The broker should now be running in the backend
 **mosquitto service status**
 `sudo systemctl status mosquitto`
@@ -27,4 +29,6 @@ sudo: unable to resolve host melon: Name or service not known
 Jul 28 11:14:08 melon systemd[1]: Starting Mosquitto MQTT v3.1/v3.1.1 Broker...
 Jul 28 11:14:08 melon systemd[1]: Started Mosquitto MQTT v3.1/v3.1.1 Broker.
 ```
+
+_you can better understand [mosquitto](https://mosquitto.org/)
 
