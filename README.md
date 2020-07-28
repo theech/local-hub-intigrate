@@ -4,16 +4,19 @@
 ## Install Local hub requirement
 **_All the requirements software are available in the following step_**
 #### Install mosquitto (MQTT Broker)
+
 `sudo apt install mosquitto mosquitto-clients`
 
 This command will install both mosquitto and mosquitto-clients
 
 **enable mosquitto run when system is booted**
+
 `sudo systemctl enable mosquitto`
 
 The broker should now be running in the backend
 
 **mosquitto service status**
+
 `sudo systemctl status mosquitto`
 
 This should be showing the following output:
