@@ -39,3 +39,29 @@ Jul 28 11:14:08 melon systemd[1]: Started Mosquitto MQTT v3.1/v3.1.1 Broker.
 
 _you can better understand [mosquitto](https://mosquitto.org/)_
 
+## Install Influxdb (MQTT time-series database)
+
+Adding the key will allow the package manager on Raspbian to search the repository and verify the packages its installing.
+
+`wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -`
+
+Now enter the following command to add the InfluxDB repository to the sources list.
+
+`echo "deb https://repos.influxdata.com/debian buster stable" | sudo tee /etc/apt/sources.list.d/influxdb.list`
+
+Run the following command on your Raspberry Pi to update the package list.
+
+`sudo apt update`
+
+To install InfluxDB to our Raspberry Pi, all we need to do is run the command below.
+
+`sudo apt install influxdb`
+
+Run the following two commands to enable InfluxDB to start at boot on your Raspberry Pi.
+
+```sudo systemctl unmask influxdb
+sudo systemctl enable influxdb```
+
+To start up the InfluxDB server, we will need to run the following command. The service manager will then start up the service and begin monitoring it.
+
+`sudo systemctl start influxdb`
