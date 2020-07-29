@@ -59,7 +59,8 @@ To install InfluxDB to our Raspberry Pi, all we need to do is run the command be
 
 Run the following two commands to enable InfluxDB to start at boot on your Raspberry Pi.
 
-```sudo systemctl unmask influxdb
+```
+sudo systemctl unmask influxdb
 sudo systemctl enable influxdb
 ```
 
